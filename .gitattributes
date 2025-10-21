@@ -1,0 +1,57 @@
+#Normaliza los finales de línea
+* text=auto
+
+# Fuerza LF para archivos de código fuente 
+*.java text eol=lf
+*.xml text eol=lf
+*.properties text eol=lf
+*.gradle text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.sh text eol=lf
+
+# Archivos compilados y binarios (no diffs, no merges)
+*.class binary
+*.jar binary
+*.war binary
+*.ear binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.exe binary
+*.dll binary
+
+# Deshabilita diffs para archivos binarios
+*.class -diff
+*.jar -diff
+
+# Evita intentos de merge en binarios
+*.jar merge=ours
+*.class merge=ours
+
+# Fuerza UTF-8 como codificación por defecto
+*.java text working-tree-encoding=UTF-8
+*.xml text working-tree-encoding=UTF-8
+*.properties text working-tree-encoding=UTF-8
+
+# Ignorar archivos temporales o de IDEs en exportaciones
+.idea/* export-ignore
+*.iml export-ignore
+*.log export-ignore
+target/* export-ignore
+
+#3Dmodels
+*.3dmlfs
+*.3dslfs
+*.blend*lfs
+*.c4dlfs
+*.colladalfs
+*.daelfs
+*.dxflfs
